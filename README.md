@@ -28,13 +28,19 @@ Ziel des Projekts ist es, ein PVE (Proxmox Virtual Environment) auf einem Server
 - High Availability (HA)
 
 ### Umgebung
--	Proxmox (PVE)
-Vergleich Proxmox vs OpenStack
+- Proxmox VE (PVE)  
+(Geplanter Vergleich Proxmox vs. OpenStack)
 
-### Harware 
--	Server aus dem Labor aus der AFBB
--	Extra Festplatte falls nicht genug vorhanden im Server (ggf. eigene mitbringen)
--	Wenn benötigt als cluster Setup, laptop zu Serber umbauen
+## Vergleich zwischen Proxmox VE und OpenStack
+| Software    | Funktion | Vorteile | Nachteile | Einsatzbereich |
+| :---        | :---     | :---     | :---      | :--- |
+| OpenStack   | Cloud-Management-Plattform (IaaS): Compute, Storage, Netzwerk über viele Hosts | Sehr skalierbar, modular, für Public/Private Cloud, Open Source | Hohe Komplexität, hoher Ressourcenbedarf | Große Rechenzentren, Service Provider, Enterprise Clouds |
+| Proxmox VE  | Virtualisierungsplattform mit Cluster, Storage, Backups | Einfach zu installieren, integrierte GUI, gute Container-/VM-Verwaltung, Open Source | Weniger skalierbar, nicht für Public-Cloud-Betrieb gedacht | Kleine bis mittlere Umgebungen, Labs, Unternehmens-IT |
+
+### Hardware
+- Server aus dem Labor (AFBB)
+- Zusätzliche Festplatte, falls Kapazität fehlt
+- Falls benötigt für Cluster-Setup: Umbau eines Laptops zum Server
 
 ### Betriebssysteme
 - Basis: Debian 12 (Bookworm) oder Debian 13 (Trixie)
@@ -83,10 +89,18 @@ Vergleich Proxmox vs OpenStack
 ### Backups
 - Integrierte Proxmox-Backup-Funktionen
 
-## Welche Recovery Time Objective (RTO) soll erreicht werden?
-Eine geringe RTO sollte sollte gegeben sein, durch die regelmäßigen Backups sollte in einem Fall der unterbrechung der Resourcen und corruption der Daten innerhalb der Zeit die es braucht zur Wiederherstellung recht gering sein.
-(Auch möglich wäre ein HA System, da ist die RTO sehr gering)
+## Vergleich ausgewählter Software / Alternativen
+| Software | Alternative | Zweck / Funktion |
+| :---     | :---        | :--- |
+| Tailscale | ZeroTier | Tailscale: Mesh-VPN (WireGuard, Identity-basiert); ZeroTier: virtuelles Layer-2/3-Netzwerk |
+| Cloudflare Tunnel | ngrok | Cloudflare: dauerhafte, sichere Zero-Trust-Tunnel; ngrok: temporäre Tunnels für Tests |
+| Docker | Podman | Docker: großes Ökosystem; Podman: rootless, daemonlos |
+| TalosOS (K8s) | k3s | TalosOS: spezialisiertes Minimal-OS für sichere K8s-Cluster; k3s: schlanke K8s-Variante |
+| OPNsense | pfSense | Beide: Open-Source-Firewalls mit Routing, VPN, IDS/IPS |
+| Windows Server | Univention Corporate Server | Windows: AD / zentrale Dienste; UCS: Linux-basiert, AD-kompatibel |
 
+## Recovery Time Objective (RTO)
+Durch regelmäßige Backups soll eine möglichst geringe RTO erreicht werden. Optional kann ein HA-Setup die Ausfallzeit weiter minimieren.
 
 ## Welche Systemeigenschaften sollen vom Monitoring überwacht werden?
 ### Hardware
