@@ -61,15 +61,6 @@ Die Backups werden via einer “Datacenter” Gruppe verwaltet in der man ganz e
 Das sollte die Anforderungen des Backups Thema vollständig erfüllen.
 Falls noch Zeit ist, wird eine weitere manuelle Backup Methode eingebaut die Daten via SMB/CIFS in eine Storage Box von Hetzner in ein Rechenzentrum sendet und lagert.
 
-### Umgebung
--	Proxmox (PVE)
-Vergleich Proxmox vs OpenStack
-
-### Harware
--	Server aus dem Labor aus der AFBB
--	Extra Festplatte falls nicht genug vorhanden im Server (ggf. eigene mitbringen)
--	Wenn benötigt als cluster Setup, laptop zu Serber umbauen
-
 ### Betriebssysteme 
 -	Grundsystem Debian 12 bookworm oder Debian 13 trixie
 
@@ -104,7 +95,7 @@ Durch regelmäßige Backups soll eine möglichst geringe RTO erreicht werden. Op
 
 ## Welche Systemeigenschaften sollen vom Monitoring überwacht werden?
 ### Hardware
--	CPU-Auslastung (gesamt und pro Prozess)
+-	CPU-Auslastung 
 -	Arbeitsspeicher (Nutzung, verfügbarer Speicher, Cache)
 -	Festplatten (Auslastung, freier Speicher, I/O-Operationen)
 -	Netzwerk (Bandbreite, Verbindung, Latenz)
@@ -144,4 +135,4 @@ Automatisierung durch:
 ## Anleitung/Tutorials/Dokumentationen
 -	Die Docu’s der jeweiligen Softwares
 -	Google als Suchmaschine
--	AI wie ChatGPT, Gemini, Cloud Sonnet, und änhliches
+-	AI wie ChatGPT, Gemini, Cloude Sonnet, und änhliches
