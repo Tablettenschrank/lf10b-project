@@ -29,7 +29,6 @@ Ziel des Projekts ist es, ein PVE (Proxmox Virtual Environment) auf einem Server
 
 ### Umgebung
 - Proxmox VE (PVE)  
-(Geplanter Vergleich Proxmox vs. OpenStack)
 
 ## Vergleich zwischen Proxmox VE und OpenStack
 | Software    | Funktion | Vorteile | Nachteile | Einsatzbereich |
@@ -38,7 +37,7 @@ Ziel des Projekts ist es, ein PVE (Proxmox Virtual Environment) auf einem Server
 | Proxmox VE  | Virtualisierungsplattform mit Cluster, Storage, Backups | Einfach zu installieren, integrierte GUI, gute Container-/VM-Verwaltung, Open Source | Weniger skalierbar, nicht für Public-Cloud-Betrieb gedacht | Kleine bis mittlere Umgebungen, Labs, Unternehmens-IT |
 
 ### Hardware
-- Server aus dem Labor (AFBB)
+- Server aus dem Labor (Schule)
 - Zusätzliche Festplatte, falls Kapazität fehlt
 - Falls benötigt für Cluster-Setup: Umbau eines Laptops zum Server
 
