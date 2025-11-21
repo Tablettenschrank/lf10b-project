@@ -63,7 +63,3 @@ Alias einstellen - nur nach bedarf
 ```shellscript
 nano /etc/bash.bashrc
 ```
-
-
-
-BILD
