@@ -1,0 +1,70 @@
+auto lo
+iface lo inet loopback
+
+iface ens5f1np1 inet manual
+
+auto vmbr0
+iface vmbr0 inet static
+	address 192.168.88.240/24
+	gateway 192.168.88.1
+	bridge-ports ens5f1np1
+	bridge-stp off
+	bridge-fd 0
+#MikroTik Network
+iface ens5f0np0 inet manual
+
+#auto vmbr1
+#iface vmbr1 inet static
+#        address 192.168.88.241/24
+#        gateway 192.168.88.1
+#        bridge-ports ens5f0np0
+#        bridge-stp off
+#        bridge-fd 0
+#iface eno1 inet manual
+#auto vmbr2
+#iface vmbr2 inet static
+#        address 192.168.88.242/24
+#        gateway 192.168.88.1
+#        bridge-ports eno1
+#        bridge-stp off
+#        bridge-fd 0
+#	post-up sysctl -w net.ipv4.ip_forward=1
+#	post-up iptables -t nat -A PREROUTING -i vmbr2 -p tcp -j DNAT --to 10.10.10.1
+#	post-up iptables -t nat -A PREROUTING -i vmbr2 -p udp -j DNAT --to 10.10.10.1
+#LAN and WAN Of internal server of lab
+iface eno2 inet manual
+
+auto eno1
+iface eno1 inet static
+        address 192.168.88.242/24
+        gateway 192.168.88.1
+        bridge-ports none
+        bridge-stp off
+        bridge-id 0
+        post-up sysctl -w net.ipv4.ip_forward=1
+        post-up iptables -t nat -A PREROUTING -i eno1 -p tcp -j DNAT --to 10.10.10.1
+        post-up iptables -t nat -A PREROUTING -i eno1 -p udp -j DNAT --to 10.10.10.1
+#LAN and WAN Of internal server of lab
+
+#External address 217.94.211.118
+
+auto vmbr6
+iface vmbr6 inet manual
+	address 10.10.10.0/30
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+        post-up iptables -t nat -A POSTROUTING -s '10.10.10.1/30' -o eno1 -j MASQUERADE
+        post-down iptables -t nat -D POSTROUTING -s '10.10.10.1/30' -o eno1 -j MASQUERADE
+	#post-up iptables -t nat -A PREROUTING -i vmbr6 -d 192.168.88.242 -p tcp -m multiport -j DNAT --to 10.10.10.1
+	#post-up iptables -t nat -A PREROUTING -i vmbr6 -d 192.168.88.242 -p udp -m multiport -j DNAT --to 10.10.10.1
+#WAN
+
+auto vmbr7
+iface vmbr7 inet manual
+        ovs_type OVSBridge
+#LAN
+
+source /etc/network/interfaces.d/*
+
+#Primary Tutorial from The Morpheus Tutorials

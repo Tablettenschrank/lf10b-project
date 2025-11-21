@@ -15,6 +15,28 @@ Ziel des Projekts ist es, ein PVE (Proxmox Virtual Environment) auf einem Server
 - Vorbereitung auf zukünftige Abschlussprojekte
 - Schaffung einer nachhaltigen Infrastruktur für zukünftige Jahrgänge
 
+## Was haben wir gemacht oder machen wir noch?
+1. [Vorbereitung](./Vorbereitung/vorbereitung.md)
+   * Einfache und Kurze vorbereitung bezüglich aufbau und configuration und Planung
+2. [BIOS & RAID](./Bios_Raid/bios_raid.md)
+   * BIOS & RAID einstellungen + veränderungen
+3. [PVE Install](./PVE_Install/pve_install.md)
+   * Einfache Installation und Konfiguration von Proxmox auf einem Server
+4. [Checkmk ](./checkmk/checkmk.md)
+   * Checkmk unser Monitoring via Docker Compose, config und Detailreiche Dokumentation
+5. [Backup erstellen & wiederherstellen](./Backups/backup.md)
+   * Backups erstellen, und wiederherstellen über einne USB Stick
+6. [Automatisierung](./Automatisierung/automatisierung.md)
+   * Automatische Sicherheitsupdates 
+7. [Netzwerk](./Netzwerk/netzwerk.md)
+   * Netzwerk Konfiguration und änderungen falls vorhanden
+8. [Wiederanlaufsplan](./Wiederanlaufsplan/wiederanlaufsplan.md)
+   * Wiederanlaufsplan für den Notfall
+9. [Restlicher Stuff](./Stuff/restlicher_stuff.md)
+   * Sachen die wir nicht direkt zuordnen konnten
+10. [Todo & offene Punkte](./ToDo/todo.md)
+   * Offene Punkte und Sachen die noch gemacht werden müssen und wir nicht geschaft haben
+
 ## Welche Dienste sollen als Teil des Projekts integriert werden?
 
 ### Primäre Aufgaben
