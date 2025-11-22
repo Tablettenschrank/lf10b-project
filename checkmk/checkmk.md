@@ -17,7 +17,7 @@ Dieses Dokument beschreibt die Einrichtung und grundlegende Konfiguration eines 
 Stelle sicher, dass die folgenden Komponenten auf dem Host-System und im LXC-Container installiert und konfiguriert sind:
 
 * **Host-System:**
-  * Betriebssystem: (z.B. Proxmox PVE 9.1 - Deb13)
+  * Betriebssystem: (z.B. Proxmox PVE 9.1 - Debian 13)
 * **LXC Container:**
   * Betriebssystem: (Debian 12)
   * Docker Engine und Docker Compose installiert
@@ -102,8 +102,6 @@ Nach der Anmeldung kannst du die grundlegenden Einstellungen für deine Monitori
 Der Checkmk Web-Interface ist erreichbar unter:
 `http://192.168.88.28:8080/`
 
-**Login**:
-
-&#x20;   **User**: cmkadmin
-
-&#x20;   **Passwort**: Bier123\*
+**Login**:  
+**User**: cmkadmin  
+**Passwort**: `Bier123*`

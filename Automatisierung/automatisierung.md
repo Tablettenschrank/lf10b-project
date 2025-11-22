@@ -1,6 +1,6 @@
 # Automatisierung
 
-Automatisiert wurden die Security updates von Deb13 Trixie, damit man immer auf dem neusten stand ist.
+Automatisiert wurden die Security updates von Debian 13 Trixie, damit man immer auf dem neusten stand ist.
 
 Generelle updates werden nicht automatisch gemacht, da dies risiken birgt, wie Probleme in Packages das docker nicht mehr richtig funktioniert.
 
@@ -66,6 +66,6 @@ sudo unattended-upgrades --dry-run --debug
 
 1. **Logs & Monitoring**
 
-* **Execution Logs:**`/var/log/unattended-upgrades/unattended-upgrades.log`
-* **Systemd Timer Status:**`systemctl status apt-daily-upgrade.timer`
+* **Execution Logs:** `/var/log/unattended-upgrades/unattended-upgrades.log`
+* **Systemd Timer Status:** `systemctl status apt-daily-upgrade.timer`
 

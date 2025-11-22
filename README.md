@@ -83,7 +83,7 @@ Das sollte die Anforderungen des Backups Thema vollständig erfüllen.
 Falls noch Zeit ist, wird eine weitere manuelle Backup Methode eingebaut die Daten via SMB/CIFS in eine Storage Box von Hetzner in ein Rechenzentrum sendet und lagert.
 
 ### Betriebssysteme 
--	Grundsystem Debian 12 bookworm oder Debian 13 trixie
+-	Grundsystem Debian 12 (Bookworm) oder Debian 13 (Trixie)
 
 ## Mit welcher Software sollen die Dienste betrieben werden?
 ### Software 

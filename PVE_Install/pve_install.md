@@ -8,10 +8,10 @@
 &#x20;Definition Festplatten zfs1 (RAID 5)
 
 
-&#x20;Proxmox PW: Bier123\*
-&#x20;Email: labor@afbb.local
-&#x20;Hostname: pve1.local 
-&#x20;IP 192.168.88.240
+&#x20;Proxmox PW: `Bier123*`  
+&#x20;Email: `labor@afbb.local`  
+&#x20;Hostname: pve1.local   
+&#x20;IP: 192.168.88.240  
 
 
 
@@ -43,10 +43,8 @@
 
 
 &#x20;Login:
-
-U:root
-
-P:Bier123\*
+User: root  
+Passwort: `Bier123*`  
 
 
 Standardkonfiguration mit dem Internet funktioniert 

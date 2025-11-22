@@ -17,8 +17,7 @@ MikroTik -> Switch -> Server
 
 
 
-Interfaces
-
+Interfaces  
 * RJ45 = ens5f1np1 ==> vmbr0
 * SFP Port = eno2 ==> vmbr6 
 * vmbr7
@@ -31,7 +30,7 @@ Die Konfiguration der Netzwerk verbindung ist in: `/etc/network/interfaces`
 
 **vmbr6** leitet traffic in eine VM mit Opnsense weiter die als Firewall dient um ein isoliertes LAN zu simulieren und dienste geschützt darin zu hosten. Die **vmbr6** dienst als WAN aus sicht der Opnsense.
 
-vmbr7 dient als LAN aus sicht der Opnsense.
+**vmbr7** dient als LAN aus sicht der Opnsense.
 
 
 
@@ -41,4 +40,12 @@ On system located on `/etc/network/interfaces`
 
 #### **Rack Netzwerk Aufbau**
 
-[![](https://mermaid.ink/img/pako:eNpVkNFOgzAUhl-lOVeaMFKY0NELE8fm3aJxixfCLhoo0Aza5VicuvDudixz2que7_-_06RHKEwpgUPVmkPRCLRks8g1cechWyncmY3akRfTW4lbMpnck_lN4JP1QdmiuT0X5yNfZM-vS7KW-OGauf4bpVl4UbZnno58mT3ZRuJVukaP_yPwoEZVArfYSw86iZ04jXA8STm4bidz4O6qZW9RtDnkenDaXug3Y7qLiaavG-CVaN_d1O9LYeVCiRpF90tR6lJianptgTPKxiXAj_AJPKTMn8YhmwU0YQFlwdSDL-BR5NOAxWHiUMJCGsWDB9_ju9SPY5bMZjQOEnqXUBZ6IEtlDa7OP18YXakahh-tr3Xy?type=png)](https://mermaid.live/edit#pako:eNpVkNFOgzAUhl-lOVeaMFKY0NELE8fm3aJxixfCLhoo0Aza5VicuvDudixz2que7_-_06RHKEwpgUPVmkPRCLRks8g1cechWyncmY3akRfTW4lbMpnck_lN4JP1QdmiuT0X5yNfZM-vS7KW-OGauf4bpVl4UbZnno58mT3ZRuJVukaP_yPwoEZVArfYSw86iZ04jXA8STm4bidz4O6qZW9RtDnkenDaXug3Y7qLiaavG-CVaN_d1O9LYeVCiRpF90tR6lJianptgTPKxiXAj_AJPKTMn8YhmwU0YQFlwdSDL-BR5NOAxWHiUMJCGsWDB9_ju9SPY5bMZjQOEnqXUBZ6IEtlDa7OP18YXakahh-tr3Xy)
+```mermaid
+flowchart TD
+    A[MirkoTik Router] --> B(1. Switch)
+    B --> D[PVE Server]
+
+    B --> C[2. Switch]
+    C --> E[Other Server]
+    C --> F[Other Server]
+```
