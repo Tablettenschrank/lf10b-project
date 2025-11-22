@@ -1,7 +1,5 @@
 # Restlicher Stuff
 
-BILD
-
 https://docs.docker.com/engine/install/linux-postinstall/
 https://docs.docker.com/engine/install/debian/
 

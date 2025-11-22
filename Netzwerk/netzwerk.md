@@ -4,7 +4,7 @@
 
 
 
-Es gibt 2 Angeschlossene Netzwerk Kabel,:
+Es gibt 2 Angeschlossene Netzwerk Kabel:
 
 1. RJ45 (Ethernet)
 2. SFP Port - Glasfaser 
@@ -25,7 +25,7 @@ Interfaces
 
 
 
-Die Konifuration der Netzwerk verbindung ist in: `/etc/network/interfaces`
+Die Konfiguration der Netzwerk verbindung ist in: `/etc/network/interfaces`
 
 **vmbr0** ist via DHCP bridged an das Netzwerk vom MikroTik und für jeden Erreichbar.
 
