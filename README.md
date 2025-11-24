@@ -36,6 +36,8 @@ Ziel des Projekts ist es, ein PVE (Proxmox Virtual Environment) auf einem Server
    * Sachen die wir nicht direkt zuordnen konnten
 10. [Todo & offene Punkte](./ToDo/todo.md)
    * Offene Punkte und Sachen die noch gemacht werden müssen und wir nicht geschaft haben
+11. [Reflexion & IT Sicherheit](./Reflexion_IT_Sicherheit/Reflexion_IT_Sicherheit.md)
+   * Reflexion über das projekt und was als nächstes gemacht wird bzw. gemacht werden sollte bezüglich Sicherheit.
 
 ## Welche Dienste sollen als Teil des Projekts integriert werden?
 
